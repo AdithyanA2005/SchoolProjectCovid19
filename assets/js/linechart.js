@@ -13,7 +13,7 @@ new Chart(document.getElementById("linechart"), {
 			fill: false,
 			backgroundColor: window.chartColors.purple,
 			borderColor: window.chartColors.purple,
-			data: [10,40,20,35,25,50,10,70],
+			data: [100,400,200,350,25000,500,100,700,800],
 		}]
 	},
 	options: {
