@@ -1,0 +1,11 @@
+<!-- "{{ url_for('static', filename='css/templates.css') }} -->
+{% extends 'partials/base.html' %}
+{% block body %}
+
+    {% include 'partials/intro.html' %}
+    {% include 'partials/graph.html' %}
+    {% include 'partials/content.html' %}
+    {% include 'partials/team.html' %}
+    {% include 'partials/biblio.html' %}    
+
+{% endblock body %}
