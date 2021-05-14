@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/templates.css') }}">
+
+	<!-- Tab Decoration  -->
+	<title>Covid-Stats</title>
+</head>
+
+<body class="sidebar-menu-collapsed">
+	<!-- <div class="se-pre-con"></div> -->
+
+    <!-- Main Section  -->
+	<section>
+		<!-- sidebar menu start -->
+		<div class="sidebar-menu sticky-sidebar-menu">
+
+			<!-- logo start -->
+			<div class="logo">
+				<h1><a href="/">Collective</a></h1>
+			</div>
+			<div class="logo-icon text-center">
+				<a href="/" title="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo-icon"> </a>
+			</div>
+			<!-- //logo end -->
+
+			<div class="sidebar-menu-inner">
+				<!-- sidebar nav start -->
+				<ul class="nav nav-pills nav-stacked custom-nav">
+					<li class="active"><a href="#intro-section"><i class="fa fa-home"></i><span>Home</span></a></li>
+					<li class="active"><a href="#graph-section"><i class="fa fa-tachometer"></i><span>Graphs</span></a></li>
+					<li class="active"><a href="#contents-section"><i class="fa fa-cogs"></i><span>Contents</span></a></li>
+					<li class="active"><a href="#people-section"><i class="fa fa-user"></i><span>Project Members</span></a></li>
+					<li class="active"><a href="#biblio-section"><i class="fa fa-list"></i><span>Bibliography</span></a></li>
+				</ul>
+				<!-- //sidebar nav end -->
+
+				<!-- toggle button start -->
+				<a class="toggle-btn">
+					<i class="fa fa-angle-double-left menu-collapsed__left"><span>Collapse Sidebar</span></i>
+					<i class="fa fa-angle-double-right menu-collapsed__right"></i>
+				</a>
+				<!-- //toggle button end -->
+			</div>
+		</div>
+		<!-- //sidebar menu end -->
+
+		<!-- header-starts -->
+		<div class="header sticky-header" style="z-index: 1;">
+			<!-- notification menu start -->
+			<div class="menu-right">
+				<div class="navbar user-panel-top">
+					<div class="search-box">
+						<form action="#search-results.html" method="get">
+							<input class="search-input" placeholder="Search Here..." type="search" id="search">
+							<button class="search-submit" value=""><span class="fa fa-search"></span></button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--notification menu end -->
+		</div>
+		<!-- //header-ends -->
+
+		<!-- main content start -->
+		<div class="main-content">
+			<!-- content -->
+			<div class="container-fluid content-top-gap">
+				
+			{% block body %}{% endblock body %}
+						
+			</div>
+			<!-- //content -->
+		</div>
+		<!-- main content end-->
+
+	</section>
+    <!-- Main Section End  -->
+
+    <!-- Footer Section  -->
+	<footer class="dashboard">
+		<div>
+			<div>
+				<p>For such websites and Persoanl-Website Contact: </p>
+				<p><a href="mailto:deepaadithyan56@gmail.com">AdithyanA</a> or mailto:deepaadithyan56@gmail.com</p>
+			</div>
+			<div class="people-social mt-3">
+				<img class="rounded-circle" style="height: 3rem;" src="{{ url_for('static', filename='images/adithyan.jfif') }}" alt=" ">
+				<a href="mailto:deepaadithyan56@gmail.com" class="twitter"><span class="fa fa-envelope"></span></a>
+				<a href="#team" class="instagram"><span class="fa fa-instagram"></span></a>
+				<a href="#team" class="linkedin"><span class="fa fa-linkedin"></span></a>
+			</div>
+		</div>
+		<p>&copy 2020 Collective. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank" class="text-primary">W3layouts.</a></p>
+	</footer>
+    <!-- Footer Section End  -->
+
+	<!-- Move To Top -->
+	<button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
+		<span class="fa fa-angle-up"></span>
+	</button>
+
+	<script>
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () {
+			scrollFunction()
+		};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("movetop").style.display = "block";
+			} else {
+				document.getElementById("movetop").style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+	<!-- Move To Top End -->
+
+
+
+
+
+	<script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery-1.10.2.min.js') }}"></script>
+
+	<!-- chart js -->
+	<script src="{{ url_for('static', filename='js/Chart.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+	<!-- //chart js -->
+
+	<!-- Different scripts of charts.  Ex.Barchart, Linechart -->
+	<script src="{{ url_for('static', filename='js/bar.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/linechart.js') }}"></script>
+	<!-- //Different scripts of charts.  Ex.Barchart, Linechart -->
+
+
+	<script src="{{ url_for('static', filename='js/jquery.nicescroll.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+	<!-- close script -->
+	<script>
+		var closebtns = document.getElementsByClassName("close-grid");
+		var i;
+
+		for (i = 0; i < closebtns.length; i++) {
+			closebtns[i].addEventListener("click", function () {
+				this.parentElement.style.display = 'none';
+			});
+		}
+	</script>
+	<!-- //close script -->
+
+	<!-- disable body scroll when navbar is in active -->
+	<script>
+		$(function () {
+			$('.sidebar-menu-collapsed').click(function () {
+				$('body').toggleClass('noscroll');
+			})
+		});
+	</script>
+	<!-- disable body scroll when navbar is in active -->
+
+	<!-- loading-gif Js -->
+	<script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+	<script>
+		$(window).load(function () {
+			// Animate loader off screen
+			$(".se-pre-con").fadeOut("slow");;
+		});
+	</script>
+	<!--// loading-gif Js -->
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>
