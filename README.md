@@ -21,7 +21,4 @@
 ## **Link To Visit The Website**
 
 
-## [**Visist Covid-Stats**](https://adithyana2005.github.io/Covid_In_Kerala_Himachal "Covid-Stats")
-
-https://adithyana2005.github.io/Covid_In_Kerala_Himachal/
-#
+## [**Visist Covid-Stats**](https://adithyana2005.github.io/SchoolProjectCovid19/ "Covid-Stats")
